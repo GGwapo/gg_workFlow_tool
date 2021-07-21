@@ -1,5 +1,5 @@
 import { Fragment } from "react";
-import './requestTable.module.css';
+// import classes from './RequestTable.module.css';
 
 const DUMMY_REQUEST = [
     {
@@ -30,18 +30,20 @@ function RequestTable(props) {
     
     return (
         <Fragment>
-            <table className="table table-striped table-hover table-md">
-                <tr>
-                    <th scope="col">#</th>
-                    <th scope="col">req_id</th>
-                    <th scope="col">Company</th>
-                    <th scope="col">Contact Person</th>
-                    <th scope="col">Contact No.</th>
-                    <th scope="col">Status</th>
-                </tr>
+            <table className="table table-hover table-md">
+                <thead className="table-info table-bordered">
+                    <tr>
+                        <th scope="col">#</th>
+                        <th scope="col">req_id</th>
+                        <th scope="col">Company</th>
+                        <th scope="col">Contact Person</th>
+                        <th scope="col">Contact No.</th>
+                        <th scope="col">Status</th>
+                    </tr>
+                </thead>
                 <tbody>
                 {DUMMY_REQUEST.map((requestItem) => (
-                    <tr>
+                    <tr key={requestItem.req_id}>
                         <td>{count++}</td>
                         <td>{requestItem.req_id}</td>
                         <td>{requestItem.company}</td>
