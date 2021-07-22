@@ -23,6 +23,13 @@ const DUMMY_REQUEST = [
         contact_no: "09176564054",
         status: "Cancelled",
     },
+    {
+        req_id: "202107140914",
+        company: "GGP Group of Companies 4",
+        contact_person: "Gwapo Gerald Galanida",
+        contact_no: "09176564054",
+        status: "Closed",
+    },
 ];
 
 function RequestTable(props) {
